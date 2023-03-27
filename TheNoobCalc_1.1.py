@@ -5,6 +5,7 @@ SEPARATOR_LINE = "_" * 72
 MENU = ("➕  Addition", "➖  Subtraction", "✖️   Multiplication", "➗  Division", "➗  Integer division", "🔺  Power", "Ⓜ️   Modulo", "❌  Exit")
 final_value = 0
 stop = False
+## the 'x_signs' lists from line 9 to line 15 are very useful from line 38 to 50 where I pass multiple elif conditions using any (which is gonna check multiple strings)
 addition_signs = ['+', ' + ', '+ ', ' +']
 subtraction_signs = ['-', ' - ','- ', ' -']
 multiplication_signs = ['*', ' * ', '* ', ' *']
