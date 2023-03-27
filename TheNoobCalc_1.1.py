@@ -5,7 +5,7 @@ SEPARATOR_LINE = "_" * 72
 MENU = ("➕  Addition", "➖  Subtraction", "✖️   Multiplication", "➗  Division", "➗  Integer division", "🔺  Power", "Ⓜ️   Modulo", "❌  Exit")
 final_value = 0
 ## the 'x_signs' sets from line 8 to line 14 are very useful from line 39 to 51 where I pass multiple elif conditions using any (which is gonna check multiple strings)
-addition_signs = ('+', ' + ', '+ ', ' +')
+addition_signs = ('+', ' + ', '+ ', ' +') # As you can see I made various use cases with spaces placed differently around the signs, so that all posible cases work
 subtraction_signs = ('-', ' - ','- ', ' -')
 multiplication_signs = ('*', ' * ', '* ', ' *')
 division_signs = ('/', ' / ', '/ ', ' /')
