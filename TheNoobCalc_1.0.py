@@ -38,7 +38,7 @@ while True:
         
         VALUES_LIST = [float(x) for x in VALUES_LIST]
         
-        if 1 <= choice <= 8:
+        if 1 <= choice <= 7:
             print("_" * 72)
             match choice:
                 case 1:
