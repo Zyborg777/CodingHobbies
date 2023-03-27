@@ -11,7 +11,6 @@ MENU = [
     "Integer division                                               [//] |",
     "Power                                                          [**] |",
     "Modulo                                                        [mod] |",
-    "Percentages                                                     [%] |",
     "Quit program                                                    [x] |",
 ]
 print(f"\n🖖 WELCOME TO THE NOOB CALCULATOR! 📟 [release 1.0, codename 'Aquarius']\n")
@@ -28,7 +27,7 @@ while True:
         continue
     else:
         choice = int(choice)
-        if choice == 9:
+        if choice == 8:
             print("Goodbye! 🖖")
             break
         
@@ -63,6 +62,3 @@ while True:
                 case 7:
                     final_value = reduce(lambda x, y: x % y, VALUES_LIST)
                     print(f"The modulo operation of {VALUES_LIST} is {final_value}")
-                case 8:
-                    final_value = reduce(lambda x, y: float(y) / 100 * float(x), VALUES_LIST)
-                    print(f"The percentage operation of {VALUES_LIST} is {final_value}")
