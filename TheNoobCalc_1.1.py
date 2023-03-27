@@ -5,13 +5,23 @@ SEPARATOR_LINE = "_" * 72
 MENU = ("➕  Addition", "➖  Subtraction", "✖️   Multiplication", "➗  Division", "➗  Integer division", "🔺  Power", "Ⓜ️   Modulo", "❌  Exit")
 final_value = 0
 ## the 'x_signs' sets from line 8 to line 14 are very useful from line 39 to 51 where I pass multiple elif conditions using any (which is gonna check multiple strings)
-addition_signs = ('+', ' + ', '+ ', ' +') # As you can see I made various use cases with spaces placed differently around the signs, so that all posible cases work
+addition_signs = ('+', ' + ', '+ ', ' +')
 subtraction_signs = ('-', ' - ','- ', ' -')
 multiplication_signs = ('*', ' * ', '* ', ' *')
 division_signs = ('/', ' / ', '/ ', ' /')
 int_division_signs = ('//', ' // ', '// ', ' //')
 power_signs = ('**', ' ** ', '** ', ' **')
 modulo_signs = ('m', ' m ', 'm ', ' m')
+
+## THESE ARE THE STRINGS THAT WILL BE PRINTED AT THE VERY END OF AN OPERATION
+show_sum = f"The sum of {VALUES_LIST} is {final_value}"
+show_sub = f"The subtraction of {VALUES_LIST} is {final_value}"
+show_multi = f"The multiplication of {VALUES_LIST} is {final_value}"
+show_division = f"The division of {VALUES_LIST} is {final_value}"
+show_int_division = f"The integer division of {VALUES_LIST} is {int(final_value)}"
+show_power = f"The power operation of {VALUES_LIST} is {final_value}"
+show_modulo = f"The modulo operation of {VALUES_LIST} is {final_value}"
+
 print("\n🖖 WELCOME TO THE NOOB CALCULATOR! 📟 [release 1.1, codename 'Aquarius']\n")
 
 while True:
@@ -62,22 +72,22 @@ while True:
             match option:
                 case 1:
                     final_value = sum(VALUES_LIST)
-                    print(f"The sum of {VALUES_LIST} is {final_value}")
+                    print(show_sum)
                 case 2:
                     final_value = reduce(lambda x, y: x - y, VALUES_LIST) # Starting here I use the reduce function with lambda to tell instructions of what's going to happen with the values
-                    print(f"The subtraction of {VALUES_LIST} is {final_value}")
+                    print(show_sub)
                 case 3:
                     final_value = reduce(lambda x, y: x * y, VALUES_LIST)
-                    print(f"The multiplication of {VALUES_LIST} is {final_value}")
+                    print(show_multi)
                 case 4:
                     final_value = reduce(lambda x, y: x / y, VALUES_LIST)
-                    print(f"The division of {VALUES_LIST} is {final_value}")
+                    print(show_division)
                 case 5:
                     final_value = reduce(lambda x, y: x // y, VALUES_LIST)
-                    print(f"The integer division of {VALUES_LIST} is {int(final_value)}")
+                    print(show_int_division)
                 case 6:
                     final_value = reduce(lambda x, y: x ** y, VALUES_LIST)
-                    print(f"The power operation of {VALUES_LIST} is {final_value}")
+                    print(show_power)
                 case 7:
                     final_value = reduce(lambda x, y: x % y, VALUES_LIST)
-                    print(f"The modulo operation of {VALUES_LIST} is {final_value}")
+                    print(show_modulo)
